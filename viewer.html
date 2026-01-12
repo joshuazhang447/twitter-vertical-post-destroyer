@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Combined Image Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #15202b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        #container {
+            margin: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            max-width: 90%;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .controls {
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1da1f2;
+            color: white;
+            border: none;
+            border-radius: 9999px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /** Twitter blue RIP */
+        button:hover {
+            background-color: #03A9F5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls">
+        <button id="save-btn">Save Image</button>
+    </div>
+    <div id="container">
+        <img id="result-image" alt="Combined Tweet Images">
+    </div>
+    <script src="viewer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter VP Destroyer",
+    "version": "1.1",
+    "description": "No more stupid vertical posts! Combines all vertical images in Twitter posts into a single view. Save the image as PNG!",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://x.com/*",
+                "https://twitter.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": [
+        "https://pbs.twimg.com/*"
+    ]
+}
